@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Pixelify+Sans:wght@400..700&display=swap"
+        rel="stylesheet">
+    <title>Rafay's Birthday Gift</title>
+</head>
+
+<body>
+    <div id="home" class="home">
+        <h1 class="welcome">WELCOME</h1>
+        <button type="button"><img class="play-btn" src="assets/play-btn.png" alt="play-btn"
+                onclick="showScreen('password')"></button>
+    </div>
+
+    <div id="password" class="password"> <!-- Password Screen -->
+        <h1>ENTER PASSWORD</h1>
+        <p>
+            psst hint: <br>
+            the game's color scheme
+        </p>
+        <div class="password-submit">
+            <input type="password" id="passwordInput">
+            <button id="submit-pass" onclick="checkPassword()" class="enter-btn"><img class="btn-img" src="assets/enter-btn.png" alt="enter-btn"></button>
+        </div>
+    </div>
+
+    <div id="trivia-intro" class="trivia-intro"> <!-- Trivia Intro -->
+        <h2>Ready for the Trivia?</h2>
+        <button onclick="showScreen('trivia')">Start Trivia</button>
+    </div>
+
+
+
+
+
+
+
+
+
+    
+    <div id="trivia" class="trivia"> <!-- Trivia Questions -->
+        <h2 id="question-text"></h2>
+        <button onclick="answerQuestion(0)">Option 1</button>
+        <button onclick="answerQuestion(1)">Option 2</button>
+        <button onclick="answerQuestion(2)">Option 3</button>
+        <button onclick="answerQuestion(3)">Option 4</button>
+    </div>
+
+    <div id="score-page" class="score-page"> <!-- Score Page -->
+        <h2>Your Score: <span id="score"></span></h2>
+        <button onclick="showScreen('wish-page')">See Your Wish</button>
+    </div>
+
+    <div id="wish-page" class="wish-page"> <!-- Final Wish -->
+        <h2>Happy Birthday!</h2>
+        <p>Your custom birthday message goes here.</p>
+    </div>
+
+    <script src="triviaData.js"></script>
+    <script src="script.js"></script>
+
+</body>
+
+</html>
