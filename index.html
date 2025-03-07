@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Rafay's Birthday Gift</title>
+</head>
+
+<body>
+    <!-- Only the CLICK ME button is here -->
+    <button onclick="openInNewWindow()" class="start-btn">CLICK ME!!!</button>
+
+    <script>
+        function openInNewWindow() {
+            const url = "popup.html";
+            const width = 526;
+            const height = 591;
+            const left = (screen.width - width) / 2;
+            const top = (screen.height - height) / 2;
+
+            const windowFeatures = `width=${width},height=${height},left=${left},top=${top},resizable=no,scrollbars=no,toolbar=no,location=no,status=no,menubar=no`;
+
+            const newWindow = window.open(url, "_blank", windowFeatures);
+
+            // if (!newWindow) {
+            //     alert("Pop-up blocked! Please allow pop-ups and try again.");
+            // }
+        }
+
+    </script>
+</body>
+
+</html>

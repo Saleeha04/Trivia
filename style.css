@@ -1,0 +1,355 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    background: transparent; /* Makes the window background transparent */
+}
+
+body {
+    font-family: "Pixelify Sans", serif;
+    text-align: center;
+    width: 526px;
+    height: 591px;
+    align-items: center;
+    overflow: hidden;
+}
+
+.start-btn {
+    display: flex;
+    align-items: center;
+}
+
+/* ---------------------- */
+
+.play-btn {
+    display: flex;
+    width: 150px;
+    height: 150px;
+    filter: drop-shadow(0px 0px 0px rgba(65, 55, 62, 0.8)); /* Dark solid shadow */
+    transition: filter 0.8s ease-in-out;
+    animation: pixel-bounce 1s steps(1) infinite alternate;
+}
+
+@keyframes pixel-bounce {
+    0%, 100% { transform: translateY(0); } 
+    50% { transform: translateY(-8px); } 
+    25%, 75% { transform: translateY(-4px); } 
+}
+
+.home {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 140px;
+    gap: 60px;
+    background-image: url('assets/home-wall.gif');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+    width: 526px;
+    height: 591px;
+}
+
+.welcome {
+    display: flex;
+    font-size: 64px;
+    font-weight: 500;
+    color: #6C0062;
+}
+
+
+
+
+
+
+
+/* --------------------- */
+.password {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 180px;
+    gap: 35px;
+    background-image: url('assets/home-wall.gif');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+    width: 526px;
+    height: 591px;
+}
+
+h1 {
+    font-family: "Pixelify Sans", serif;
+    font-optical-sizing: auto;
+    font-weight: 500; /*400-700*/
+    font-size: 48px;
+    color: #6C0062;
+}
+
+p {
+    color: white;
+    text-align: left;
+    align-self: flex-start;
+    padding-left: 75px;
+    line-height: 150%;
+}
+
+.enter-btn {
+    display: flex;
+    flex-direction: column;
+    /* width: 30px;
+    height: 30px; */
+}
+.btn-img {
+    width: 30px;
+    height: 30px;
+}
+
+.password-submit {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+input[type="password"] {
+    width: 334px; /* Adjust as needed */
+    height: 34px;
+    padding: 10px;
+    border: none; /* Remove border */
+    border-radius: 25px; /* Make it rounded */
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3); /* Permanent drop shadow */
+    outline: none; /* Prevent default focus outline */
+    background-color: rgb(226, 226, 226); /* Adjust background if needed */
+    text-align: center; /* Optional: Center text */
+    font-size: 30px;
+    color: #974e64;
+    caret-color: #df8ca5;
+}
+
+/* ----------------------- */
+
+.trivia-intro {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    align-items: center;
+    background-image: url(assets/trivia-wall.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding-top: 50px;
+    min-height: 100vh;
+    /* gap: 50px; */
+}
+
+ol {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 430px;
+    color: white;
+    text-align: left;
+    padding-left: 10px;
+    margin-top: 0px;
+}
+
+li {
+    line-height: 23px;
+}
+
+.next-btn {
+    display: flex;
+    flex-direction: row;
+    margin-top: 50px;
+    /* padding-top: 50px; */
+    position: fixed; /* Ensure it stays in place */
+    bottom: 20px; /* Adjust padding from bottom */
+    right: 20px; /* Adjust padding from right */
+}
+
+.trivia-intro h1:first-of-type {
+    padding-top: 10px;
+    color: #FF90F4; /* Unique color for TRIVIA BOMB */
+}
+.trivia-intro p:first-of-type {
+    padding-left: 45px;
+    padding-top: 40px;
+    padding-bottom: 10px;
+}
+
+.question-btn {
+    color: black;
+    text-align: left;
+    font-family: "Pixelify Sans", serif;
+    align-self: flex-start;
+    padding-left: 75px;
+    line-height: 150%;
+    font-weight: 700;
+
+    background-color: rgb(219, 213, 213); /* White background */
+    border: none;
+    padding: 3px 20px; /* Adjust padding for an oval shape */
+    border-radius: 10px; /* Makes it oval */
+    cursor: pointer;
+    transition: 0.1s ease-in;
+    width: 400px; /* Ensures the buttons don't stretch too much */
+    text-align: left;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    padding-left: 40px; /* Adds space before the text starts */
+}
+
+.trivia-options button:hover {
+    transform: scale(1.05); /* Slightly increase size on hover/selection */
+    background-color: #f0f0f0; /* Light gray hover effect */
+    outline: none; /* Removes default browser outline */
+}
+
+#trivia p {
+    position: absolute;
+    top: 23%; /* Adjust this value to place the question higher or lower */
+}
+
+.trivia-options {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Adds space between buttons */
+    padding-top: 50px;
+    align-items: left;
+    position: absolute;
+    bottom: 25%; /* Adjust this to control vertical position of options */
+}
+
+
+
+/* ------------------- */
+
+.score {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    padding-left: 150px;
+    padding-top: 20px;
+    font-size: 80px;
+    color: #f0f0f0;
+}
+
+.score-message {
+    padding-top: 10px;
+}
+
+.score-page p {
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.score-page {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    align-items: center;
+    background-image: url(assets/end-wall.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding-top: 50px;
+    min-height: 100vh;
+    /* gap: 50px; */
+}
+
+.score-page h1:first-of-type {
+    padding-top: 10px;
+    padding-bottom: 20px;
+    color: #FF9500;
+}
+
+
+/* ------------------ */
+.wish-page {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    align-items: center;
+    background-image: url(assets/wish-wall.gif);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding-top: 50px;
+    min-height: 100vh;
+    /* gap: 50px; */   
+}
+
+.wish-page p {
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.hbd {
+    color: #FF7A7C;
+    padding-top: 20px;
+    padding-bottom: 40px;
+}
+
+#wish-message-container {
+    width: 100%; /* Adjust width as needed */
+    max-height: 350px; /* Set a fixed height for scrolling */
+    overflow-y: auto; /* Enables vertical scrolling */
+    /* padding: 15px; Space around the text */
+    text-align: center;
+    border: none;
+    
+    /* Styling the scrollbar */
+    scrollbar-width: thin; /* For Firefox */
+    scrollbar-color: rgba(155, 153, 153, 0.3) transparent; /* Track invisible, scrollbar visible */
+}
+
+/* Webkit Browsers (Chrome, Edge, Safari) */
+#wish-message-container::-webkit-scrollbar {
+    width: 8px; /* Thin scrollbar */
+}
+
+#wish-message-container::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.3); /* Light gray color */
+    border-radius: 80px; /* Oval shape */
+}
+
+#wish-message-container::-webkit-scrollbar-track {
+    background: transparent; /* Invisible track */
+}
+
+/* ---------------- */
+
+.home-button {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 1000; /* Ensures it appears above other elements */
+}
+
+.home-button img {
+    width: 30px; /* Adjust size */
+    height: auto;
+    cursor: pointer;
+}
+
+button {
+    /* padding: 10px 20px; */
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 10px;
+    background: none;  /* Removes default background */
+    border: none;  /* Removes border */
+    outline: none;  /* Removes focus outline */
+    padding: 0;  /* Removes extra spacing */
+    cursor: pointer;
+}
+
+button:hover {
+    filter: drop-shadow(2px 2px 1px rgba(160, 106, 144, 0.8)); /* Dark solid shadow */
+}
