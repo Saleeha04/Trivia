@@ -132,6 +132,211 @@ input[type="password"] {
     caret-color: #df8ca5;
 }
 
+/* ----------------------- */
+
+.trivia-intro {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    align-items: center;
+    background-image: url(assets/trivia-wall.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding-top: 50px;
+    min-height: 100vh;
+    /* gap: 50px; */
+}
+
+ol {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 430px;
+    color: white;
+    text-align: left;
+    padding-left: 10px;
+    margin-top: 0px;
+}
+
+li {
+    line-height: 23px;
+}
+
+.next-btn {
+    display: flex;
+    flex-direction: row;
+    margin-top: 50px;
+    /* padding-top: 50px; */
+    position: fixed; /* Ensure it stays in place */
+    bottom: 20px; /* Adjust padding from bottom */
+    right: 20px; /* Adjust padding from right */
+}
+
+.trivia-intro h1:first-of-type {
+    padding-top: 10px;
+    color: #FF90F4; /* Unique color for TRIVIA BOMB */
+}
+.trivia-intro p:first-of-type {
+    padding-left: 45px;
+    padding-top: 40px;
+    padding-bottom: 10px;
+}
+
+.question-btn {
+    color: black;
+    text-align: left;
+    font-family: "Pixelify Sans", serif;
+    align-self: flex-start;
+    padding-left: 75px;
+    line-height: 150%;
+    font-weight: 700;
+
+    background-color: rgb(219, 213, 213); /* White background */
+    border: none;
+    padding: 3px 20px; /* Adjust padding for an oval shape */
+    border-radius: 10px; /* Makes it oval */
+    cursor: pointer;
+    transition: 0.1s ease-in;
+    width: 400px; /* Ensures the buttons don't stretch too much */
+    text-align: left;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    padding-left: 40px; /* Adds space before the text starts */
+}
+
+.trivia-options button:hover {
+    transform: scale(1.05); /* Slightly increase size on hover/selection */
+    background-color: #f0f0f0; /* Light gray hover effect */
+    outline: none; /* Removes default browser outline */
+}
+
+#trivia p {
+    position: absolute;
+    top: 23%; /* Adjust this value to place the question higher or lower */
+}
+
+.trivia-options {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Adds space between buttons */
+    padding-top: 50px;
+    align-items: left;
+    position: absolute;
+    bottom: 25%; /* Adjust this to control vertical position of options */
+}
+
+
+
+/* ------------------- */
+
+.score {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    padding-left: 150px;
+    padding-top: 20px;
+    font-size: 80px;
+    color: #f0f0f0;
+}
+
+.score-message {
+    padding-top: 10px;
+}
+
+.score-page p {
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.score-page {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    align-items: center;
+    background-image: url(assets/end-wall.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding-top: 50px;
+    min-height: 100vh;
+    /* gap: 50px; */
+}
+
+.score-page h1:first-of-type {
+    padding-top: 10px;
+    padding-bottom: 20px;
+    color: #FF9500;
+}
+
+
+/* ------------------ */
+.wish-page {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    align-items: center;
+    background-image: url(assets/wish-wall.gif);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding-top: 50px;
+    min-height: 100vh;
+    /* gap: 50px; */   
+}
+
+.wish-page p {
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.hbd {
+    color: #FF7A7C;
+    padding-top: 20px;
+    padding-bottom: 40px;
+}
+
+#wish-message-container {
+    width: 100%; /* Adjust width as needed */
+    max-height: 350px; /* Set a fixed height for scrolling */
+    overflow-y: auto; /* Enables vertical scrolling */
+    /* padding: 15px; Space around the text */
+    text-align: center;
+    border: none;
+    
+    /* Styling the scrollbar */
+    scrollbar-width: thin; /* For Firefox */
+    scrollbar-color: rgba(155, 153, 153, 0.3) transparent; /* Track invisible, scrollbar visible */
+}
+
+/* Webkit Browsers (Chrome, Edge, Safari) */
+#wish-message-container::-webkit-scrollbar {
+    width: 8px; /* Thin scrollbar */
+}
+
+#wish-message-container::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.3); /* Light gray color */
+    border-radius: 80px; /* Oval shape */
+}
+
+#wish-message-container::-webkit-scrollbar-track {
+    background: transparent; /* Invisible track */
+}
+
+/* ---------------- */
+
+.home-button {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 1000; /* Ensures it appears above other elements */
+}
+
+.home-button img {
+    width: 30px; /* Adjust size */
+    height: auto;
+    cursor: pointer;
+}
+
 button {
     /* padding: 10px 20px; */
     border: none;

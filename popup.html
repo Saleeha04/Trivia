@@ -13,60 +13,78 @@
     <title>Rafay's Birthday Gift</title>
 </head>
 
-<body>
+<body>   
     <div id="home" class="home">
         <h1 class="welcome">WELCOME</h1>
         <button type="button"><img class="play-btn" src="assets/play-btn.png" alt="play-btn"
                 onclick="showScreen('password')"></button>
     </div>
 
-    <div id="password" class="password"> <!-- Password Screen -->
+    <div id="password" class="password">
         <h1>ENTER PASSWORD</h1>
         <p>
             psst hint: <br>
-            the game's color scheme
+            my favorite anime
         </p>
         <div class="password-submit">
             <input type="password" id="passwordInput">
-            <button id="submit-pass" onclick="checkPassword()" class="enter-btn"><img class="btn-img" src="assets/enter-btn.png" alt="enter-btn"></button>
+            <button id="submit-pass" class="enter-btn"><img class="btn-img" src="assets/enter-btn.png"
+                    alt="enter-btn"></button>
         </div>
     </div>
 
-    <div id="trivia-intro" class="trivia-intro"> <!-- Trivia Intro -->
-        <h2>Ready for the Trivia?</h2>
-        <button onclick="showScreen('trivia')">Start Trivia</button>
+    <div id="trivia-intro" class="trivia-intro">
+        <h1>TRIVIA BOMB</h1>
+        <p>
+            How to Play: <br><br>
+        <ol>
+            <li>There are a total of 10 questions. You have to answer the question</li>
+            <li>The answers won't always be the obvious ones! They are designed to irritate you >:D</li>
+            <li>Don’t worry about making a mistake, but beware! Your results will be calculated at the end!</li>
+            <li>Your birthday wish will be customized to how much you score~ <br>
+                The best birthday wish is at 100%</li>
+            <li>You are not allowed to judge the questions and their answers even if you disagree with it!</li>
+            <li>I put a lot of effort into this, so make sure you pretend to like it even if you don’t!</li>
+        </ol>
+        </p>
+        <button id="trivia-next" class="next-btn"><img class="btn-img" src="assets/enter-btn.png"
+                alt="enter-btn"></button>
     </div>
 
-
-
-
-
-
-
-
-
-    
-    <div id="trivia" class="trivia"> <!-- Trivia Questions -->
-        <h2 id="question-text"></h2>
-        <button onclick="answerQuestion(0)">Option 1</button>
-        <button onclick="answerQuestion(1)">Option 2</button>
-        <button onclick="answerQuestion(2)">Option 3</button>
-        <button onclick="answerQuestion(3)">Option 4</button>
+    <div id="trivia" class="trivia-intro" style="display: none;">
+        <h1 id="question"></h1>
+        <p></p>
+        <div class="trivia-options">
+            <button class="question-btn"></button>
+            <button class="question-btn"></button>
+            <button class="question-btn"></button>
+            <button class="question-btn"></button>
+        </div>
     </div>
 
-    <div id="score-page" class="score-page"> <!-- Score Page -->
-        <h2>Your Score: <span id="score"></span></h2>
-        <button onclick="showScreen('wish-page')">See Your Wish</button>
+    <div id="score-page" class="score-page">
+        <h1>SCORE</h1>
+        <p id="score-message" class="score-message"></p>
+        <p id="score" class="score"></p>
+    <button id="next-to-wish"><img class="play-btn" src="assets/wish-btn.png" alt="open-wish"></button>
     </div>
 
-    <div id="wish-page" class="wish-page"> <!-- Final Wish -->
-        <h2>Happy Birthday!</h2>
-        <p>Your custom birthday message goes here.</p>
+    <div id="wish-page" class="wish-page">
+        <button id="home-btn" class="home-button">
+            <img class="btn-img" src="assets/cross-btn.png" alt="Go Home">
+        </button>     
+        <h1 class="hbd">HAPPY BIRTHDAY!</h1>
+        <div id="wish-message-container">
+            <p id="wish-message"></p> 
+        </div>
     </div>
 
     <script src="triviaData.js"></script>
     <script src="script.js"></script>
 
+    <audio id="bg-music" autoplay loop>
+        <source src="assets/lmb.mp3" type="audio/mpeg">
+    </audio>
 </body>
 
 </html>
